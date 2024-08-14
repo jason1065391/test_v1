@@ -6,6 +6,7 @@ use App\Http\Controllers\TaskController;
 // 註冊登入路由
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use Illuminate\Support\Facades\Auth;
 
 
 // 顯示登入表單
