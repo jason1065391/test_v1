@@ -8,3 +8,8 @@ Route::resource('tasks', TaskController::class);
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/test', function () {
+    return view('test');
+});
