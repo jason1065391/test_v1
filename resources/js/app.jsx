@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactTest from './components/ReactTest';
 
-function App() {
+function APP() {
     return (
         <div>
             <ReactTest />
@@ -11,4 +11,4 @@ function App() {
 }
 
 // 渲染 App 組件到 #main-container
-ReactDOM.render(<App />, document.getElementById('main-container'));
+ReactDOM.render(<APP />, document.getElementById('main-container'));
