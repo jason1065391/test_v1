@@ -8,7 +8,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\Auth\EmailVerificationController;
 
 
 // 顯示登入表單
@@ -32,6 +32,19 @@ Route::middleware('auth')->group(function () {
 });
 
 
+Route::get('email/verify', [EmailVerificationController::class, 'show'])
+    ->middleware(['auth'])
+    ->name('verification.notice');
+
+// 驗證電子郵件地址
+Route::get('email/verify/{id}/{hash}', [EmailVerificationController::class, 'verify'])
+    ->middleware(['auth', 'signed'])
+    ->name('verification.verify');
+
+// 重新發送驗證郵件
+Route::post('email/verification-notification', [EmailVerificationController::class, 'resend'])
+    ->middleware(['auth', 'throttle:6,1'])
+    ->name('verification.resend');
 // 登出路由
 Route::post('logout', function () {
     Auth::logout();
