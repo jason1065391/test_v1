@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/app.jsx'])
+    @vite(['resources/css/app.css', 'resources/js/register.js'])
+    <script>
+        window.routeCheckAccount = "{{ route('check.account') }}";
+    </script>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <div class="register-container">
@@ -15,8 +19,9 @@
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="account">Name:</label>
+            <label for="account">Account:</label>
             <input type="text" id="account" name="account" required>
+            <span id="account-error" style="color: red; display: none;"></span>
 
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>

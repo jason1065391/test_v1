@@ -7,6 +7,8 @@ use App\Http\Controllers\TaskController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\DashboardController;
+
 
 
 // 顯示登入表單
@@ -21,19 +23,19 @@ Route::get('register', [RegisterController::class, 'showRegistrationForm'])->nam
 // 處理註冊請求
 Route::post('register', [RegisterController::class, 'register'])->name('register');
 
-// 其他需要身份驗證的路由
-Route::middleware('auth')->group(function () {
-    Route::get('dashboard', function () {
-        return view('dashboard'); // 假設有一個 dashboard.blade.php 視圖
-    })->name('dashboard');
+// 處理帳號的驗證請求
+Route::post('check-account', [RegisterController::class, 'checkAccount'])->name('check.account');
 
+Route::middleware('auth')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     // 添加其他受保護的路由
 });
+
 
 // 登出路由
 Route::post('logout', function () {
     Auth::logout();
-    return redirect('/');
+    return redirect('/'); // 登出後重定向到首頁
 })->name('logout');
 
 Route::resource('tasks', TaskController::class);

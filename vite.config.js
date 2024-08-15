@@ -9,6 +9,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/ReactTest.jsx', // 更新這裡的文件名
+                'resources/js/register.js' // 添加你的新 JavaScript 檔案
             ],
             refresh: true,
         }),
