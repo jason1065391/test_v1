@@ -8,10 +8,11 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/css/app.css',
-                'resources/js/app.jsx', // 確保包含所有你需要的檔案
+                'resources/js/ReactTest.jsx', // 更新這裡的文件名
             ],
             refresh: true,
         }),
         react(),
     ],
 });
+
