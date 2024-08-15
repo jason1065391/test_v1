@@ -6,7 +6,10 @@
     <title>Register</title>
     @viteReactRefresh
     @vite(['resources/css/app.css', 'resources/js/register.js'])
+    <!-- 引入 jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        // 在全局範圍內設置變量
         window.routeCheckAccount = "{{ route('check.account') }}";
     </script>
     <meta name="csrf-token" content="{{ csrf_token() }}">
