@@ -13,7 +13,7 @@
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <label for="account">account:</label>
-            <input type="text" id="account" name="account" required>
+            <input type="text" id="account" name="account" value="{{ old('email') }}" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>

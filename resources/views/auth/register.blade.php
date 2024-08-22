@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- 設置字符編碼為 UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 設置視窗縮放比例 -->
-    <title>Register</title> <!-- 頁面標題 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
     @viteReactRefresh
-    @vite(['resources/css/app.css', 'resources/js/register.js']) <!-- 引入 Vite 打包的 CSS 和 JS 檔案 -->
+    @vite(['resources/css/app.css','resources/js/auth/account_check.js']) <!-- 引入 Vite 打包的 CSS 和 JS 檔案 -->
     
     <!-- 引入 jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery 函式庫，用於簡化 JavaScript 編程 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
     <script>
         // 在全局範圍內設置變量
@@ -16,34 +16,45 @@
     </script>
 
     <!-- 設置 CSRF token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- 用於 AJAX 請求的 CSRF 防護 -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <div class="register-container">
-        <h1>Register</h1> <!-- 註冊頁面標題 -->
+        <h1>Register</h1>
         
-        <!-- 註冊表單 -->
-        <form method="POST" action="{{ route('register') }}"> <!-- 表單的提交方法為 POST，提交到註冊路由 -->
-            @csrf <!-- CSRF 保護，防止跨站請求偽造攻擊 -->
+        <form method="POST" action="{{ route('register') }}">
+            @csrf
 
-            <label for="name">名字:</label> <!-- 名字欄位的標籤 -->
-            <input type="text" id="name" name="name" required> <!-- 名字輸入框 -->
+            <label for="name">名字:</label>
+            <input type="text" id="name" name="name" value="{{ old('email') }}" required>
             <br>
 
-            <label for="account">帳號:</label> <!-- 帳號欄位的標籤 -->
-            <input type="text" id="account" name="account" required> <!-- 帳號輸入框 -->
-            <span id="account-error" style="color: red; display: none;"></span> <!-- 顯示帳號錯誤消息的區域 -->
+            <label for="account">帳號:</label>
+            <input type="text" id="account" name="account" value="{{ old('email') }}" required>
+            <span id="account-error" style="color: red; display: none;"></span>
             <br>
 
-            <label for="email">Email:</label> <!-- 電子郵件欄位的標籤 -->
-            <input type="email" id="email" name="email" required> <!-- 電子郵件輸入框 -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" required>
             <br>
 
-            <label for="password">密碼:</label> <!-- 密碼欄位的標籤 -->
-            <input type="password" id="password" name="password" required> <!-- 密碼輸入框 -->
+            <label for="password">密碼:</label>
+            <input type="password" id="password" name="password" 
+                   pattern=".{6,}" 
+                   title="密碼至少 6 位數" 
+                   required>
             <br>
 
-            <button type="submit">Register</button> <!-- 提交按鈕 -->
+            <label for="gender">性別:</label>
+            <select id="gender" name="gender" required>
+                <option value="">請選擇</option>
+                <option value="male">男性</option>
+                <option value="female">女性</option>
+                <option value="other">其他</option>
+            </select>
+            <br>
+
+            <button type="submit">Register</button>
         </form>
     </div>
 </body>
