@@ -1,3 +1,22 @@
-h1{
-    color: aquamarine;
-}
+/* vite 入口檔案，這個文件中引入其他樣式文件。這樣，Vite 就能夠處理這些樣式文件。 */
+
+/* resources/css/app.css */
+
+/* 引入全局樣式 */
+@import './global/global.css';
+
+/* 引入布局樣式 */
+@import './layouts/header.css';
+@import './layouts/footer.css';
+
+/* 引入組件樣式 */
+@import './components/button.css';
+@import './components/modal.css';
+
+/* 引入頁面樣式 */
+@import './pages/home.css';
+@import './pages/about.css';
+
+/* 引入工具類樣式 */
+@import './utils/spacing.css';
+@import './utils/colors.css';
