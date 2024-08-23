@@ -11,12 +11,3 @@
 
 /* 引入組件樣式 */
 @import './components/button.css';
-@import './components/modal.css';
-
-/* 引入頁面樣式 */
-@import './pages/home.css';
-@import './pages/about.css';
-
-/* 引入工具類樣式 */
-@import './utils/spacing.css';
-@import './utils/colors.css';

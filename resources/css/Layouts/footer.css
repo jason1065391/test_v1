@@ -1,0 +1,27 @@
+/* resources/css/layouts/footer.css */
+
+/* 頁腳樣式 */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer-content ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.footer-content li {
+    margin: 0 15px;
+}
+
+.footer-content a {
+    color: white;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}

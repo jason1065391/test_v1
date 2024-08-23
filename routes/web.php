@@ -41,6 +41,7 @@ Route::get('/', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
 Route::get('/home', function () {
-    return view('home');
+    return view('pages/home');
 });
