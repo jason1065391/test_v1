@@ -1,27 +1,71 @@
-/* resources/css/layouts/footer.css */
-
-/* 頁腳樣式 */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #343a40;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #495057;
+}
+
+.footer-section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social {
     text-align: center;
 }
 
-.footer-content ul {
-    display: flex;
-    justify-content: center;
+.social-link {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #495057;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #007bff;
+}
+
+.sitemap ul {
+    list-style: none;
     padding: 0;
 }
 
-.footer-content li {
-    margin: 0 15px;
+.sitemap li {
+    margin-bottom: 10px;
 }
 
-.footer-content a {
-    color: white;
-}
-
-.footer-content a:hover {
-    text-decoration: underline;
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-top: 1px solid #dee2e6;
+    font-size: 14px;
+    color: #495057;
 }
