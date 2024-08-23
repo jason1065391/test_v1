@@ -45,3 +45,12 @@ Route::get('/test', function () {
 Route::get('/home', function () {
     return view('pages/home');
 });
+
+Route::get('/studentCases', function () {
+    return view('pages/studentCases');
+});
+
+Route::get('/teacherLists', function () {
+    return view('pages/teacherLists');
+});
+

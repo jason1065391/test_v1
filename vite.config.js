@@ -11,6 +11,7 @@ export default defineConfig({
                 'resources/css/pages/home.css',
                 'resources/css/pages/studentCases.css',
                 'resources/css/pages/teacherLists.css',
+                'resources/css/pages/memberCenter.css',
                 
                 'resources/js/app.js',
                 'resources/js/pages/home.js'
