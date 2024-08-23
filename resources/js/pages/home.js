@@ -1,4 +1,4 @@
-
+// resources\js\pages\home.js
 // 輪播圖
 document.addEventListener('DOMContentLoaded', () => {
     var slideIndex = 1;

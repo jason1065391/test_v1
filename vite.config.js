@@ -9,6 +9,9 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/pages/home.css',
+                'resources/css/pages/studentCases.css',
+                'resources/css/pages/teacherLists.css',
+                
                 'resources/js/app.js',
                 'resources/js/pages/home.js'
             ],
