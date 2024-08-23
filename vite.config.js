@@ -9,7 +9,7 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/css/pages/home.css',
-                'resources/js/app.js',  // 如果有 JavaScript 入口文件，也可以在這裡指定
+                'resources/js/app.js',
                 'resources/js/pages/home.js'
             ],
             refresh: true,
