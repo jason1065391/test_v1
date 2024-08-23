@@ -1,0 +1,3 @@
+這個資料夾通常用於存放應用程序的定義整體的頁面結構，通常包含頁首、頁尾和主要內容區域。
+例如，可以在 resources/views/layouts 目錄下放置全站通用的頁首、頁尾以及其他布局文件。
+resources/views/layouts/app.blade.php: 主布局文件，可能包含頁首、頁尾和其他通用元素。

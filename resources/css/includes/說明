@@ -1,0 +1,7 @@
+可以將頁首和頁尾等可重用的部件放在 resources/views/includes 目錄中。這樣，你可以在主佈局文件中引入這些部件。
+
+resources/views/includes/header.blade.php: 頁首
+resources/views/includes/footer.blade.php: 頁尾
+
+
+目錄中的文件主要用來存放可以在多個視圖中重用的部分視圖（如頁首、頁尾、導航欄等）。這些文件通常是一些小的視圖組件或片段，它們可以在主佈局文件中被引入，也可以在其他視圖文件中重複使用。

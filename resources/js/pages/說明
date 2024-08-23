@@ -1,0 +1,8 @@
+這些腳本文件是針對特定頁面或 UI 元件的。通常會根據頁面或功能進行分類，並且與相應的視圖文件放在一起。
+
+位置: public/js/components 或 public/js/pages
+
+範例:
+
+public/js/components/modal.js: 用於處理模態框的腳本。
+public/js/pages/home.js: 針對首頁的特定 JavaScript 功能。

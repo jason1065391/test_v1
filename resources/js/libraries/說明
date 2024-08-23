@@ -1,0 +1,8 @@
+用於第三方庫或插件的 JavaScript 文件，這些文件通常會放在 public/js/libs 目錄下。
+
+位置: public/js/libs
+
+範例:
+
+public/js/libs/jquery.js: jQuery 庫。
+public/js/libs/bootstrap.js: Bootstrap 插件。

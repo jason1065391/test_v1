@@ -1,0 +1,8 @@
+這些是從第三方引入的、經過打包的 JavaScript 文件，通常會放在 public/js/vendor 目錄下。這些腳本可能包括大型庫或框架。
+
+位置: public/js/vendor
+
+範例:
+
+public/js/vendor/vue.js: Vue.js 框架。
+public/js/vendor/react.js: React 框架。
