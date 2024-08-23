@@ -54,3 +54,7 @@ Route::get('/teacherLists', function () {
     return view('pages/teacherLists');
 });
 
+Route::get('/memberCenter', function () {
+    return view('pages/memberCenter');
+});
+

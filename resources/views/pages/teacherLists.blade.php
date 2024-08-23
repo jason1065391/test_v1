@@ -29,8 +29,8 @@
                 </select>
             </div>
 
-            <div class="t_search_salary"> 
-                <p>請選擇上課預算(小時)：</p>
+            <div class="t_search_money"> 
+                <p>請輸入上課預算(小時)：</p>
                 <div class="price-input"> 
                     <div class="price-field"> 
                         <span>最低預算</span> 
@@ -56,22 +56,6 @@
                 <br>
                 <div id="districts" class="districts_container">
                     <!-- 區域的 checkbox 會動態加到這裡 -->
-                </div>
-            </div>
-
-            <div class="t_search_time">
-                <label>請選擇預期上課時間(可複選):</label>
-                <div>
-                    <input type="checkbox" id="morning" value="morning">
-                    <label for="morning">早上</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="afternoon" value="afternoon">
-                    <label for="afternoon">下午</label>
-                </div>
-                <div>
-                    <input type="checkbox" id="evening" value="evening">
-                    <label for="evening">晚上</label>
                 </div>
             </div>
 

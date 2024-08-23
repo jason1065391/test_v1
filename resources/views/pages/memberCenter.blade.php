@@ -20,6 +20,10 @@
     <!-- 页面主体内容 -->
     <div class="container">
         
+        <!-- 釘選左邊 - 導覽列 基本資料 1.學生 2.老師 3.家長  -->
+        <div class="">
+
+        </div>
     </div>
     
     @include('layouts.footer')
