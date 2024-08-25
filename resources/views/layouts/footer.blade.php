@@ -31,11 +31,11 @@
             <div class="footer-section sitemap">
                 <h2>網站地圖</h2>
                 <ul>
-                    <li><a href="{{ url('/') }}">首頁</a></li>
-                    <li><a href="{{ url('/about') }}">關於我們</a></li>
-                    <li><a href="{{ url('/services') }}">服務</a></li>
-                    <li><a href="{{ url('/contact') }}">聯繫我們</a></li>
-                    <li><a href="{{ url('/faq') }}">常見問題</a></li>
+                    <li><button onclick="window.location.href='{{ route('home') }}'">首頁</button></li>
+                    <li><button onclick="window.location.href='{{ route('about') }}'">關於我們</button></li>
+                    <li><button onclick="window.location.href='{{ route('services') }}'">服務</button></li>
+                    <li><button onclick="window.location.href='{{ route('contact') }}'">聯繫我們</button></li>
+                    <li><button onclick="window.location.href='{{ route('faq') }}'">常見問題</button></li>
                 </ul>
             </div>
         </div>

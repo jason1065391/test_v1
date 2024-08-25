@@ -11,9 +11,6 @@
 
     <!-- 引入首页专属样式 -->
     @vite('resources/css/pages/home.css')
-
-    <!-- 如果需要，引入专门的 JavaScript 文件 -->
-    @vite('resources/js/pages/home.js')
 </head>
 
 <body>

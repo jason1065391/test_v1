@@ -42,9 +42,6 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/home', function () {
-    return view('pages/home');
-});
 
 Route::get('/studentCases', function () {
     return view('pages/studentCases');
@@ -58,3 +55,22 @@ Route::get('/memberCenter', function () {
     return view('pages/memberCenter');
 });
 
+Route::get('/home', function () {
+    return view('pages/home');
+})->name('home');
+
+Route::get('/about', function () {
+    return view('pages/aboutUs');
+})->name('about');
+
+Route::get('/services', function () {
+    return view('pages/services');
+})->name('services');
+
+Route::get('/contact', function () {
+    return view('pages/contactUs');
+})->name('contact');
+
+Route::get('/faq', function () {
+    return view('pages/faq');
+})->name('faq');

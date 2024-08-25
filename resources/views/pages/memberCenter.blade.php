@@ -1,22 +1,46 @@
-<!-- resources/views/pages/memberCenter.blade.php -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員中心</title>
 
-    <!-- 引入全局 CSS 和 JavaScript 文件 -->
-    @vite(['resources/css/app.css', 'resources/css/pages/memberCenter.css'])
+    <!-- 使用 Vite 引入 CSS 文件 -->
+    @vite('resources/css/pages/memberCenter.css')
 </head>
 <body>
-    @include('layouts.header')
+    @include('layouts.header') <!-- 引入頁首 -->
 
-    <div id="memberCenter"></div> <!-- 確保這裡的 ID 和 memberCenter.jsx 中的一致 -->
+    <div class="member_center">
+        <div class="sidebar">
+            <h2>會員中心</h2>
+            <p>管理您的帳戶資訊和其他設置。</p>
+            <ul>
+                <li><a href="#" onclick="handleSectionChange('basic-info'); return false;">
+                    基本資料
+                </a></li>
+                <li><a href="#" onclick="handleSectionChange('schedule'); return false;">
+                    課表
+                </a></li>
+                <li><a href="#" onclick="handleSectionChange('students'); return false;">
+                    學生 身分
+                </a></li>
+                <li><a href="#" onclick="handleSectionChange('teachers'); return false;">
+                    老師 身分
+                </a></li>
+                <li><a href="#" onclick="handleSectionChange('parents'); return false;">
+                    家長 身分
+                </a></li>
+            </ul>
+        </div>
+        <div id="memberCenterContent" class="content">
+            <!-- 內容區域由 React 渲染 -->
+        </div>
+    </div>
 
-    @include('layouts.footer')
+    @include('layouts.footer') <!-- 引入頁尾 -->
 
-    <!-- 引入專用的 JavaScript 文件 -->
+    <!-- 使用 Vite 引入 JavaScript 文件 -->
     @vite('resources/js/pages/memberCenter.jsx')
 </body>
 </html>

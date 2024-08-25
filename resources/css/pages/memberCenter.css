@@ -1,18 +1,40 @@
+/* 主容器 */
 .member_center {
     display: flex;
     min-height: 100vh;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
 }
 
+/* 側邊欄 */
 .sidebar {
-    width: 200px;
-    background-color: #f4f4f4;
-    padding: 10px;
-    border-right: 1px solid #ddd;
+    width: 20%; /* 縮小側邊欄的寬度 */
+    background-color: #fff;
+    padding: 20px;
+    border-right: 2px solid #ddd;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+    box-sizing: border-box; /* 確保內邊距和邊框計入寬度 */
 }
 
+.sidebar h2 {
+    font-size: 1.5em; /* 放大標題的字體大小 */
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* 側邊欄描述 */
+.sidebar p {
+    margin-top: 0;
+    margin-bottom: 15px; /* 縮小描述的下邊距 */
+    font-size: 0.9em; /* 縮小描述文字大小 */
+    color: #666;
+}
+
+/* 側邊欄選單 */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
+    margin: 0; /* 確保沒有額外的外邊距 */
 }
 
 .sidebar ul li {
@@ -21,28 +43,29 @@
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #333;
+    color: #007bff;
     cursor: pointer;
     display: block;
-    padding: 10px;
-    border-radius: 4px;
+    padding: 10px 15px; /* 調整內邊距 */
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1.1em; /* 放大字體大小 */
 }
 
 .sidebar ul li a:hover {
-    background-color: #ddd;
-    color: #000;
+    background-color: #e9ecef;
+    color: #0056b3;
 }
 
+/* 主要內容區域 */
 .content {
     flex: 1;
     padding: 20px;
-    border: 1px solid #ccc;
-    margin-left: 10px;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
+/* 內容區域的各個部分 */
 .content-section {
     display: none;
 }
@@ -51,13 +74,14 @@
     display: block;
 }
 
+/* 表單樣式 */
 form div {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
@@ -66,17 +90,18 @@ form input[type="password"],
 form input[type="date"],
 form select {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
+    border-radius: 8px;
+    box-sizing: border-box;
 }
 
 form button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     background-color: #007bff;
     color: #fff;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -85,7 +110,9 @@ form button:hover {
     background-color: #0056b3;
 }
 
+/* 信息提示樣式 */
 .info-message {
     margin-top: 20px;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: #333;
 }
