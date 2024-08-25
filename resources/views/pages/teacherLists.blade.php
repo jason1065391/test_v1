@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>老師列表</title>
 
-    <!-- 引入全局 CSS 和 JavaScript 文件 -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- 引入首頁專屬樣式 -->
     @vite('resources/css/pages/teacherLists.css')

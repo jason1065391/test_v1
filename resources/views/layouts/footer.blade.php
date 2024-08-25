@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Footer Example</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
 </head>
 <body>
@@ -25,8 +26,8 @@
             <div class="footer-section social">
                 <h2>社群媒體</h2>
                 <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://facebook.com" class="social-link"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://instagram.com" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
             </div>
             <div class="footer-section sitemap">
                 <h2>網站地圖</h2>

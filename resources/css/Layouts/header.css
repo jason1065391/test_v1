@@ -26,6 +26,7 @@ nav {
 
 .nav-links li {
     margin: 0 10px;
+    position: relative; /* 使絕對定位的下拉菜單相對於父元素 */
 }
 
 .nav-links a {
@@ -34,33 +35,37 @@ nav {
     font-weight: bold;
 }
 
-.dropdown-menu, .user-menu-dropdown, .notification-dropdown {
+.dropdown-menu {
     display: none;
     position: absolute;
+    top: 100%; /* 下拉菜單顯示在父元素下面 */
+    left: 0;
     background: #fff;
     border: 1px solid #dee2e6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     list-style: none;
     margin: 0;
+    min-width: 150px; /* 設置下拉菜單的最小寬度 */
+    white-space: nowrap; /* 防止文字換行 */
 }
 
-.dropdown:hover .dropdown-menu, .user-menu:hover .user-menu-dropdown, .notification:hover .notification-dropdown {
+.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-.dropdown-menu li, .user-menu-dropdown li, .notification-dropdown li {
+.dropdown-menu li {
     margin: 0;
 }
 
-.dropdown-menu a, .user-menu-dropdown a, .notification-dropdown a {
+.dropdown-menu a {
     display: block;
     padding: 5px 10px;
     text-decoration: none;
     color: #343a40;
 }
 
-.dropdown-menu a:hover, .user-menu-dropdown a:hover, .notification-dropdown a:hover {
+.dropdown-menu a:hover {
     background-color: #f1f1f1;
 }
 

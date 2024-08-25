@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>聯繫我們</title>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"  />
+
+
     <!-- 使用 Vite 引入 CSS 文件 -->
     @vite('resources/css/pages/contactUs.css')
 
@@ -25,9 +28,9 @@
                 </div>
                 <div class="social-media">
                     <h2>社交媒體</h2>
-                    <p><a href="https://www.facebook.com/yourcompany" target="_blank">Facebook</a></p>
-                    <p><a href="https://twitter.com/yourcompany" target="_blank">Twitter</a></p>
-                    <p><a href="https://www.instagram.com/yourcompany" target="_blank">Instagram</a></p>
+                    <p><a href="#" ><i class="fa-brands fa-linkedin"></i> LinkedIn </a></p>
+                    <p><a href="#" ><i class="fa-brands fa-facebook"></i> Facebook </a></p>
+                    <p><a href="#" ><i class="fa-brands fa-instagram"></i> Instagram </a></p>
                 </div>
             </div>
         </section>

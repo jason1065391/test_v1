@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>學生案件</title>
 
-    <!-- 引入全局 CSS 和 JavaScript 文件 -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- 引入首页专属样式 -->
     @vite('resources/css/pages/studentCases.css')
