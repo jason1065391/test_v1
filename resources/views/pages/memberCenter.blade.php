@@ -11,18 +11,35 @@
 
     <!-- 引入首页专属样式 -->
     @vite('resources/css/pages/memberCenter.css')
+    @vite('resources/js/pages/memberCenter.jsx')
+
 
 </head>
 
 <body>
     @include('layouts.header')
     
-    <!-- 页面主体内容 -->
-    <div class="container">
-        
-        <!-- 釘選左邊 - 導覽列 基本資料 1.學生 2.老師 3.家長  -->
-        <div class="">
-
+    <div id="memberCenter">
+        <div class="member_center">
+            <!-- 左邊固定瀏覽列 -->
+            <div class="sidebar">
+                <ul>
+                    <li><a href="#" data-target="basic-info">基本資料</a></li>
+                    <li><a href="#" data-target="schedule">課表</a></li>
+                    <li><a href="#" data-target="students">學生</a></li>
+                    <li><a href="#" data-target="teachers">老師</a></li>
+                    <li><a href="#" data-target="parents">家長</a></li>
+                </ul>
+            </div>
+            
+            <!-- 右邊顯示內容區域 -->
+            <div class="content">
+                <div id="basic-info" class="content-section">基本資料內容</div>
+                <div id="schedule" class="content-section">課表內容</div>
+                <div id="students" class="content-section">學生內容</div>
+                <div id="teachers" class="content-section">老師內容</div>
+                <div id="parents" class="content-section">家長內容</div>
+            </div>
         </div>
     </div>
     
