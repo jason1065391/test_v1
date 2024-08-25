@@ -1,4 +1,7 @@
+// resources/js/pages/memberCenter.jsx
+
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import '../../css/pages/memberCenter.css'; // 根據實際文件結構調整路徑
 
@@ -32,19 +35,19 @@ const MemberCenter = () => {
                     <h2>基本資料</h2>
                     <form>
                         <div>
-                            <label>姓名</label>
+                            <label>姓名：</label>
                             <input type="text" name="name" />
                         </div>
                         <div>
-                            <label>帳號</label>
+                            <label>帳號：</label>
                             <input type="text" name="username" />
                         </div>
                         <div>
-                            <label>密碼</label>
+                            <label>密碼：</label>
                             <input type="password" name="password" />
                         </div>
                         <div>
-                            <label>性別</label>
+                            <label>性別：</label>
                             <select name="gender">
                                 <option value="">選擇性別</option>
                                 <option value="male">男</option>
@@ -52,15 +55,15 @@ const MemberCenter = () => {
                             </select>
                         </div>
                         <div>
-                            <label>手機號碼</label>
+                            <label>手機號碼：</label>
                             <input type="text" name="phone" />
                         </div>
                         <div>
-                            <label>生日</label>
+                            <label>生日：</label>
                             <input type="date" name="birthday" />
                         </div>
                         <div>
-                            <label>身分證號碼</label>
+                            <label>身分證號碼：</label>
                             <input type="text" name="idNumber" />
                         </div>
                         <button type="submit">提交</button>
@@ -75,4 +78,8 @@ const MemberCenter = () => {
     );
 };
 
-export default MemberCenter;
+// 確保 MemberCenter 在此處正確渲染
+ReactDOM.render(
+    <MemberCenter />,
+    document.getElementById('memberCenter')
+);
