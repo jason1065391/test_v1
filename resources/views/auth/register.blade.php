@@ -10,17 +10,13 @@
     <!-- 引入 jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
-    <script>
-        // 在全局範圍內設置變量
-        window.routeCheckAccount = "{{ route('check.account') }}"; <!-- 定義全局變量，存儲檢查帳號是否存在的路由 URL -->
-    </script>
 
     <!-- 設置 CSRF token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
     <div class="register-container">
-        <h1>Register</h1>
+        <h1>註冊</h1>
         
         <form method="POST" action="{{ route('register') }}">
             @csrf

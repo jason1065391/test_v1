@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="login-container">
-        <h1>Login</h1>
+        <h1>登入</h1>
         <form method="POST" action="{{ route('login') }}">
             @csrf
             <label for="account">account:</label>

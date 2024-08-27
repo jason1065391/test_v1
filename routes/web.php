@@ -44,6 +44,12 @@ Route::get('/test', function () {
 
 
 
+Route::get('/login_register', function () {
+    return view('auth/login_register');
+})->name('login_register');
+
+
+
 
 Route::get('/home', function () {
     return view('pages/home');

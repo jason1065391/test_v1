@@ -8,8 +8,10 @@ export default defineConfig({
             input: [
                 'resources/css/app.css',
                 'resources/js/app.js',
+                'resources/js/auth/account_check.js',
                 'resources/css/layouts/footer.css',
                 'resources/css/layouts/header.css',
+                'resources/css/pages/loginregister.css',
                 'resources/css/pages/home.css',
                 'resources/css/pages/memberCenter.css',
                 'resources/css/pages/studentCases.css',
