@@ -43,17 +43,7 @@ Route::get('/test', function () {
 });
 
 
-Route::get('/studentCases', function () {
-    return view('pages/studentCases');
-});
 
-Route::get('/teacherLists', function () {
-    return view('pages/teacherLists');
-});
-
-Route::get('/memberCenter', function () {
-    return view('pages/memberCenter');
-});
 
 Route::get('/home', function () {
     return view('pages/home');
@@ -74,3 +64,17 @@ Route::get('/contact', function () {
 Route::get('/faq', function () {
     return view('pages/faq');
 })->name('faq');
+
+// ******************************************************************
+
+Route::get('/studentCases', function () {
+    return view('pages/studentCases');
+})->name('studentCases');
+
+Route::get('/teacherLists', function () {
+    return view('pages/teacherLists');
+})->name('teacherLists');
+
+Route::get('/memberCenter', function () {
+    return view('pages/memberCenter');
+});

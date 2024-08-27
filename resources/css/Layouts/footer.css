@@ -10,8 +10,18 @@ footer {
     flex-wrap: wrap;
 }
 
-.footer-section {
-    flex: 1;
+.footer-section.about {
+    width: 40%;
+    margin: 10px;
+}
+
+.footer-section.contact-social {
+    width: 25%;
+    margin: 10px;
+}
+
+.footer-section.sitemap {
+    width: 20%;
     margin: 10px;
 }
 
@@ -37,9 +47,6 @@ footer {
     text-decoration: underline;
 }
 
-.social {
-    text-align: center;
-}
 
 .social-link {
     margin: 0 10px;
@@ -68,4 +75,19 @@ footer {
     border-top: 1px solid #dee2e6;
     font-size: 14px;
     color: #495057;
+}
+
+.sitemap button {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none; /* Removed underline */
+    font-family: inherit; /* Ensures the button text inherits font styles */
+}
+
+.sitemap button:hover {
+    color: #0056b3;
 }

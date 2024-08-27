@@ -22,7 +22,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">網站地圖 <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ route('about') }}">關於我們</a></li>
+                        <li><a href="F">關於我們</a></li>
                         <li><a href="{{ route('services') }}">服務</a></li>
                         <li><a href="{{ route('contact') }}">聯繫我們</a></li>
                         <li><a href="{{ route('faq') }}">常見問題</a></li>
@@ -33,14 +33,14 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle">課程功能 <i class="fas fa-caret-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ url('/teacher-list') }}">老師列表</a></li>
-                        <li><a href="{{ url('/student-case') }}">學生案件</a></li>
+                        <li><a href="{{ route('teacherLists') }}">老師列表</a></li>
+                        <li><a href="{{ route('studentCases') }}">學生案件</a></li>
                         @auth
-                            <li><a href="{{ url('/teacher-resume') }}">老師發布履歷</a></li>
-                            <li><a href="{{ url('/student-find-teacher') }}">學生發布案件</a></li>
+                            <li><a href="{{ route('services') }}">老師發布履歷</a></li>
+                            <li><a href="{{ route('services') }}">學生發布案件</a></li>
                         @else
-                            <li><a href="#" onclick="alert('請先登入！');">老師發布履歷</a></li>
-                            <li><a href="#" onclick="alert('請先登入！');">學生發布案件</a></li>
+                            <li><a href="{{ route('services') }}" onclick="alert('請先登入！');">老師發布履歷</a></li>
+                            <li><a href="{{ route('services') }}" onclick="alert('請先登入！');">學生發布案件</a></li>
                         @endauth
                     </ul>
                 </li>
