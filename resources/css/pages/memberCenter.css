@@ -8,33 +8,31 @@
 
 /* 側邊欄 */
 .sidebar {
-    width: 20%; /* 縮小側邊欄的寬度 */
+    width: 20%;
     background-color: #fff;
     padding: 20px;
     border-right: 2px solid #ddd;
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
-    box-sizing: border-box; /* 確保內邊距和邊框計入寬度 */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .sidebar h2 {
-    font-size: 1.5em; /* 放大標題的字體大小 */
+    font-size: 1.5em;
     margin-bottom: 15px;
     color: #333;
 }
 
-/* 側邊欄描述 */
 .sidebar p {
     margin-top: 0;
-    margin-bottom: 15px; /* 縮小描述的下邊距 */
-    font-size: 0.9em; /* 縮小描述文字大小 */
+    margin-bottom: 15px;
+    font-size: 0.9em;
     color: #666;
 }
 
-/* 側邊欄選單 */
 .sidebar ul {
     list-style-type: none;
     padding: 0;
-    margin: 0; /* 確保沒有額外的外邊距 */
+    margin: 0;
 }
 
 .sidebar ul li {
@@ -46,10 +44,10 @@
     color: #007bff;
     cursor: pointer;
     display: block;
-    padding: 10px 15px; /* 調整內邊距 */
+    padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    font-size: 1.1em; /* 放大字體大小 */
+    font-size: 1.1em;
 }
 
 .sidebar ul li a:hover {

@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>會員中心</title>
 
-    <!-- 使用 Vite 引入 CSS 文件 -->
+    <!-- 使用 Vite 引入通用樣式 -->
+    @vite('resources/css/app.css')
+    <!-- 使用 Vite 引入頁面專屬樣式 -->
     @vite('resources/css/pages/memberCenter.css')
+
+    <!-- 使用 Vite 引入 JavaScript 文件 -->
+    @vite('resources/js/pages/memberCenter.jsx')
 </head>
 <body>
     @include('layouts.header') <!-- 引入頁首 -->
 
-    <div class="member_center">
+    <main class="member_center">
         <div class="sidebar">
             <h2>會員中心</h2>
             <p>管理您的帳戶資訊和其他設置。</p>
@@ -36,11 +41,10 @@
         <div id="memberCenterContent" class="content">
             <!-- 內容區域由 React 渲染 -->
         </div>
-    </div>
+    </main>
 
     @include('layouts.footer') <!-- 引入頁尾 -->
 
-    <!-- 使用 Vite 引入 JavaScript 文件 -->
-    @vite('resources/js/pages/memberCenter.jsx')
+
 </body>
 </html>

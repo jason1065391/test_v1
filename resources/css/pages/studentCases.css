@@ -1,1 +1,79 @@
-/* resources\css\pages\studentCases.css */
+/* 專門針對學生案件頁面的樣式 */
+.studentCases_container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.s_search {
+    margin-bottom: 30px;
+}
+
+.s_search p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.s_search div {
+    margin-bottom: 20px;
+}
+
+.s_search select, 
+.s_search input {
+    width: calc(100% - 22px); /* 調整寬度以考慮內邊距和邊框 */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 確保 padding 和 border 不影響 width */
+}
+
+.price-input {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* 確保間距 */
+}
+
+.price-field {
+    flex: 1;
+}
+
+.price-field span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* 使按鈕寬度與容器一致 */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 確保在 input 欄位內的提示文字 */
+input::placeholder {
+    color: #888;
+}
+
+/* 確保區域 checkbox 對齊 */
+.districts_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 確保間距 */
+}
+
+.districts_container label {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}

@@ -1,1 +1,97 @@
-/* resources\css\pages\teacherLists.css */
+/* 專門針對老師列表頁面的樣式 */
+.teacherLists_container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.t_search {
+    margin-bottom: 30px;
+}
+
+.t_search p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.t_search_subject,
+.t_search_money,
+.t_search_place {
+    margin-bottom: 20px;
+}
+
+.t_search select, 
+.t_search input {
+    width: calc(100% - 22px); /* 調整寬度以考慮內邊距和邊框 */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 確保 padding 和 border 不影響 width */
+}
+
+.price-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-field {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.price-field:last-child {
+    margin-right: 0;
+}
+
+.price-field span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 確保在 input 欄位內的提示文字 */
+input::placeholder {
+    color: #888;
+}
+
+/* 對齊各個容器內的元素 */
+.t_search_subject, 
+.t_search_money, 
+.t_search_place {
+    display: flex;
+    flex-direction: column;
+}
+
+.t_search_place {
+    display: flex;
+    flex-direction: column;
+}
+
+.t_search_place label {
+    margin-bottom: 5px;
+}
+
+.districts_container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.districts_container label {
+    margin-right: 10px;
+}

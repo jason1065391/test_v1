@@ -12,3 +12,64 @@
 
 /* 引入組件樣式 */
 @import './components/button.css';
+
+
+
+/* 全站通用樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    border-bottom: 1px solid #dee2e6;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+footer {
+    border-top: 1px solid #dee2e6;
+}
+
+main {
+    margin: 30px 0; /* 上下邊距 30px */
+    padding: 0 20px; /* 左右邊距 20px */
+    border-radius: 8px;
+}
+
+/* 通用的標題樣式 */
+h1, h2 {
+    color: #333;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
