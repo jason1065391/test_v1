@@ -1,43 +1,46 @@
-var a = document.getElementById("loginBtn");
-var b = document.getElementById("registerBtn");
-var x = document.getElementById("login");
-var y = document.getElementById("register");
+document.addEventListener('DOMContentLoaded', function() {
+    // JavaScript 文件: resources/js/auth/account_check.js
 
-function login(){
-    x.style.left = "4px";
-    y.style.right = "-520px";
-    a.className += " white-btn";
-    b.className = "btn";
-    x.style.opacity = 1;
-    y.style.opacity = 0;
-}
+    const registerContainer = document.getElementById('registration'); // 更正 ID
+    const loginContainer = document.getElementById('login');
 
-function register(){
-    x.style.left = "-510px";
-    y.style.right = "5px";
-    a.className = "btn";
-    b.className +=  " white-btn";
-    x.style.opacity = 0;
-    y.style.opacity = 1;
-}
+    // 顯示註冊表單
+    function showRegister() {
+        registerContainer.classList.add('active');
+        loginContainer.classList.remove('active');
+    }
 
-$(document).ready(function() {
-    $('#account').on('blur', function() {
-        let account = $(this).val();
-        $.ajax({
-            url: window.routeCheckAccount,
-            method: 'POST',
-            data: {
-                _token: $('meta[name="csrf-token"]').attr('content'),
-                account: account
-            },
-            success: function(response) {
-                if (response.exists) {
-                    $('#account-error').text('帳號已存在').show();
-                } else {
-                    $('#account-error').hide();
+    // 顯示登入表單
+    function showLogin() {
+        registerContainer.classList.remove('active');
+        loginContainer.classList.add('active');
+    }
+
+    window.register = showRegister;
+    window.login = showLogin;
+
+    // 默認顯示登入表單
+    showLogin();
+
+
+    $(document).ready(function() {
+        $('#account').on('blur', function() {
+            let account = $(this).val();
+            $.ajax({
+                url: window.routeCheckAccount, // Ensure this URL is properly defined
+                method: 'POST',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    account: account
+                },
+                success: function(response) {
+                    if (response.exists) {
+                        $('#account-error').text('帳號已存在').show();
+                    } else {
+                        $('#account-error').hide();
+                    }
                 }
-            }
+            });
         });
     });
 });

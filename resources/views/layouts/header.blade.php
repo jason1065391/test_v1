@@ -70,7 +70,7 @@
                     </li>
                 @else
                     <li>
-                        <a href="{{ url('/login') }}" class="login-btn">登入/註冊</a>
+                        <a href="{{ route('login_register') }}" class="login-btn">登入/註冊</a>
                     </li>
                 @endauth
             </ul>
