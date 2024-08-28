@@ -37,43 +37,51 @@ Route::get('/test', function () {
 
 
 
-Route::get('/login_register', function () {
-    return view('auth/login_register');
-})->name('login_register');
-
-
-
 
 Route::get('/home', function () {
     return view('pages/home');
 })->name('home');
 
+// 關於我們
 Route::get('/about', function () {
     return view('pages/aboutUs');
 })->name('about');
 
+// 服務
 Route::get('/services', function () {
     return view('pages/services');
 })->name('services');
 
+// 聯絡我們
 Route::get('/contact', function () {
     return view('pages/contactUs');
 })->name('contact');
 
+//常見問題
 Route::get('/faq', function () {
     return view('pages/faq');
 })->name('faq');
 
 // ******************************************************************
 
+// 學生案件
 Route::get('/studentCases', function () {
     return view('pages/studentCases');
 })->name('studentCases');
 
+// 老師列表
 Route::get('/teacherLists', function () {
     return view('pages/teacherLists');
 })->name('teacherLists');
 
+//會員中心
 Route::get('/memberCenter', function () {
     return view('pages/memberCenter');
-});
+})->name('memberCenter');
+
+// ************************************************
+
+//註冊登入
+Route::get('/login_register', function () {
+    return view('auth/login_register');
+})->name('login_register');
